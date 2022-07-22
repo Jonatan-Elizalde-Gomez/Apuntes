@@ -96,21 +96,25 @@ No hay forma estandar de ordenar propiedades pero esto es lo mas comun para hace
 Breakpoints mas comunes:
 
 * Moviles
-  * 320px
-  * 340px
+  * 360 x 640
+  * 360 x 720
+  * 375 x 667
+  * 375 x 812
+  * 411 x 731 
 
 * Tablets
   * 720px
-  * 768px
+  * 768px x 1024
 
 * Escritorio
-  * 1024px
-  * 1400px
+  * 1368 x 768
+  * 1920 x 1080
 
 Ejemplo real mobile first:
 * tablet: 640px
 * laptop: 1024px
 * desktop: 1440px
+
 
 <br>
 
