@@ -237,6 +237,7 @@ Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo b
 ### **Eventos**
 
 * Eventos "Event Handlers" - Es una rutina de devolución de llamada que funciona de forma asíncrona una vez que se produce un evento: 
+  
 ``` js
   button.onclick=()=>{
 }
@@ -248,7 +249,7 @@ Estos ya estan desactualizados, actualmente se utilizan los event listeners.
 
 * Eventos "Event Listeners" - El método adjunta un controlador de eventos al elemento especificado: 
 
-```json
+```js
 button.addEventListener("click",()=>{
     alert("pedro");
 });
@@ -257,6 +258,7 @@ button.addEventListener("click",()=>{
 <br>
 
 Es posible elminar un evento al momento de que se active:
+
 ```js
 button.addEventListener("click",saludar);
 function saludar(){
