@@ -247,6 +247,7 @@ Estos ya estan desactualizados, actualmente se utilizan los event listeners.
 <br>
 
 * Eventos "Event Listeners" - El método adjunta un controlador de eventos al elemento especificado: 
+
 ```json
 button.addEventListener("click",()=>{
     alert("pedro");
@@ -367,4 +368,4 @@ input.addEventListener("select",(e)=>{
 
 ## Cosas a mejorar
 
-Necesito repasar funciones flecha (no entendí la diferencia con las normales), también DOM
+Necesito repasar funciones flecha (necesito saber en que momento usar cual).
