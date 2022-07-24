@@ -132,6 +132,8 @@ numero = Math.floor(numero+1);
 
 ## DOM
 
+<br>
+
 ### **Nodo**
 
 Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo body o incluso las etiquetas de una lista.
@@ -234,7 +236,11 @@ Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo b
 
 <br>
 
-### **Eventos**
+---
+
+## Eventos
+
+<br>
 
 * Eventos "Event Handlers" - Es una rutina de devolución de llamada que funciona de forma asíncrona una vez que se produce un evento: 
   
@@ -304,7 +310,7 @@ button.addEventListener("click",(e)=>{
 
 <br>
     
-#### **Eventos del Mouse**
+### **Eventos del Mouse**
 
 `click` - Ocurre con un click.
 
@@ -314,7 +320,7 @@ button.addEventListener("click",(e)=>{
 
 `mouseout` - Ocurre cuando se mueve el puntero fuera de un elemento o de sus elementos secundarios.
 
-##### *otros*
+#### *otros*
 
 `contextmenu` - Ocurre con un click en el boton derecho en un elemento para abrir un menú contextual.
 
@@ -328,7 +334,7 @@ button.addEventListener("click",(e)=>{
 
 <br>
 
-#### **Eventos del Teclado**
+### **Eventos del Teclado**
 
 `keydown` - Ocurre cuando una tecla se deja de presionar.
 
@@ -338,7 +344,7 @@ button.addEventListener("click",(e)=>{
 
 <br>
 
-#### **Eventos de la interfaz**
+### **Eventos de la interfaz**
 
 `error` - Ocurre cuando sucede un error durante la carga de un archivo multimedia.
 
