@@ -210,7 +210,8 @@ Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo b
 
 <br>
 
-### **Obtención Modificación de Elementos 
+### **Obtención Modificación de Elementos**
+
 `textcontent` - Devuelve el texto de cualquier nodo.
 
 `innerText` - Devuelve el texto visible de un node element.
@@ -231,6 +232,135 @@ Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo b
 
 `createDocumentFragment()` - Guardamos aqui el fragmento con todos los elementos y texto y despúes un `contenedor.appendChild(fragment)` y listo.
 
+<br>
+
+### **Eventos**
+
+* Eventos "Event Handlers" - Es una rutina de devolución de llamada que funciona de forma asíncrona una vez que se produce un evento: 
+``` js
+  button.onclick=()=>{
+}
+    alert("parlothola")
+```
+Estos ya estan desactualizados, actualmente se utilizan los event listeners.
+
+<br>
+
+* Eventos "Event Listeners" - El método adjunta un controlador de eventos al elemento especificado: 
+```json
+button.addEventListener("click",()=>{
+    alert("pedro");
+});
+```
+
+<br>
+
+Es posible elminar un evento al momento de que se active:
+```js
+button.addEventListener("click",saludar);
+function saludar(){
+    alert("hola");
+}
+   button.removeEventListener("click",saludar)
+```
+
+<br>
+
+* El objeto Event - Es el que se define como parametro y se puede asi hacer referencia al propio evento.
+
+* Flujo de Eventos o "event flow" - Los eventos tienen un flujo.
+
+* Event Bubbling - Los más especificos son los hijos y los menos especificos los contenedores.
+  
+* Event Capturing - Se puede seleccionar hacer que un evento tenga más prioridad mediante el parametro true y se le da prioridad en orden de cascada al que se haya puesto el parametro:
+  
+```js
+contenedor1.addEventListener("click",(e)=>{
+    alert("di click en el contenedor rojo")
+},true);    
+
+contenedor2.addEventListener("click",(e)=>{
+    alert("di click en el contenedor azul")
+},true);
+
+button.addEventListener("click",(e)=>{
+    alert("di click en un botón")
+});
+```
+
+<br>
+
+* event.stop Propagation - Es posible evitar la propagación de eventos y que al que ocurra el más especifico no se muestren los otros eventos:
+  
+```js
+button.addEventListener("click",(e)=>{
+    alert("di click en un botón")
+    e.stopPropagation()
+});
+```
+
+<br>
+    
+#### **Eventos del Mouse**
+
+`click` - Ocurre con un click.
+
+`dblclick` - Ocurre con un doble click.
+
+`mouseover` - Ocurre cuando el puntero se mueve sobre un elemento o sobre uno de sus hijos.
+
+`mouseout` - Ocurre cuando se mueve el puntero fuera de un elemento o de sus elementos secundarios.
+
+##### *otros*
+
+`contextmenu` - Ocurre con un click en el boton derecho en un elemento para abrir un menú contextual.
+
+`mouseenter` - Ocurre cuando el puntero se mueve sobre un elemento, pero no funciona el Event Bubble, es para el soporte en internet explorer.
+
+`mouseleave` - Ocurre cuando el puntero se mueve fuera de un elemento.
+
+`mouseup` - Ocurre cuando un usuario suelta un botón del mouse sobre un elemento.
+
+`mousemove` - Ocurre cuando el puntero se mueve mientras está sobre un elemento.
+
+<br>
+
+#### **Eventos del Teclado**
+
+`keydown` - Ocurre cuando una tecla se deja de presionar.
+
+`keypress` - Ocurre cuando una tecla se presiona.
+
+`onkeyup` - Ocurre despues de que los dos eventos anteriores hayan concluido consecutivamente.
+
+<br>
+
+#### **Eventos de la interfaz**
+
+`error` - Ocurre cuando sucede un error durante la carga de un archivo multimedia.
+
+`load` - Ocurre cuando un objeto se ha cargado.
+
+`beforeunload` - Ocurre antes de que el documento esté a punto de descargarse.
+
+`unload` - Ocurre una vez que se ha descargado una página.
+
+`rezize` - Ocurre cuando se cambia el tamaño de la vista del documento.
+
+`scroll` - Ocurre cuando se desplaza la barra de desplazamiento de un elemento.
+
+`select` - Ocurre después de que el usuario selecciona algún texto de `<input>` o `<textarea>`, si por ejemplo se quiere mostrar en pantalla el texto seleccionado es posible hacer esto:
+
+```js
+input.addEventListener("select",(e)=>{
+    let start = e.target.selectionStart;
+    let end = e.target.selectionEnd;
+    let textoCompleto = input.value;
+    contenedor.texContent = textoCompleto.substring(startd,end);
+})
+```
+
+<br>
 
 ---
 
